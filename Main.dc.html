@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<title>Navigim &amp; Topografi</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px;box-sizing:border-box}
+.h{font-family:'Space Grotesk',sans-serif;margin:0;letter-spacing:-0.02em}
+.btn{display:inline-block;padding:14px 24px;border-radius:10px;font-weight:600;font-size:16px;min-height:44px;box-sizing:border-box}
+.mod{background:#fff;border:1px solid #CFDCCF;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.mod b{font-family:'Space Grotesk',sans-serif;font-size:34px;color:#2F6B3F}
+.mod h3{margin:0;font-family:'Space Grotesk',sans-serif;font-size:20px}
+.mod p{margin:0;color:#4A5A4F;line-height:1.5}
+.cap{position:absolute;left:0;right:0;top:0;padding:14px 16px 18px}
+@keyframes s1{0%,28%{opacity:1}33%,100%{opacity:0}}
+@keyframes s2{0%,33%{opacity:0}38%,61%{opacity:1}66%,100%{opacity:0}}
+@keyframes s3{0%,66%{opacity:0}71%,94%{opacity:1}99%,100%{opacity:0}}
+@keyframes pr{0%{width:0}100%{width:100%}}
+@keyframes dl{0%{stroke-dashoffset:1}12%,100%{stroke-dashoffset:0}}
+@keyframes dr{0%,33%{stroke-dashoffset:1}58%,100%{stroke-dashoffset:0}}
+@keyframes nd{0%{transform:rotate(0deg)}14%,100%{transform:rotate(70deg)}}
+@keyframes bk{0%,33%{opacity:0}40%,100%{opacity:1}}
+.sc1{animation:s1 18s infinite}.sc2{animation:s2 18s infinite}.sc3{animation:s3 18s infinite}
+.pb{animation:pr 18s linear infinite}
+.ln{stroke-dasharray:1;animation:dl 18s infinite}
+.cn{stroke-dasharray:1;animation:dr 18s infinite}
+.nd{transform-origin:0px 0px;animation:nd 18s infinite}
+.bk{animation:bk 18s infinite}
+@media (prefers-reduced-motion: reduce){.sc1,.sc2,.sc3,.pb,.ln,.cn,.nd,.bk{animation:none}.sc2,.sc3{opacity:0}.ln,.cn{stroke-dashoffset:0}}
+</style>
+</helmet>
+<div style="font-family: Inter, sans-serif; background: #F3F6F1; color: #14231A">
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding-top: 22px; padding-bottom: 22px">
+<div class="h" style="font-size: 20px; font-weight: 700; color: {{accent}}">NAVTOPO <span style="font-family: Inter, sans-serif; font-weight: 500; font-size: 13px; color: #4A5A4F; letter-spacing: 0">· Akademia e Forcave të Armatosura</span></div>
+<a href="https://claude.ai/artifact/P1ZgCvB1JeDTTurKB6fpc9" style="color: #14231A; font-weight: 500">Plani i kursit</a>
+</div>
+
+<div class="wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center; padding-top: 40px; padding-bottom: 72px">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 24px">
+<div style="font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: {{accent}}">Platformë e-learning</div>
+<h1 class="h" style="font-size: 60px; line-height: 1.05">Mëso të orientohesh. Praktiko çdo ditë.</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #3A4A3F; max-width: 520px">Navigim dhe topografi për kursantët: hartat, busulla, GNSS dhe analiza e terrenit, me ushtrime që japin rezultatin në çast.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn" href="https://claude.ai/artifact/6wjoe8uRSdsVRRjfKFhEBv" style="background: {{accent}}; color: #fff">Hap prototipin</a>
+<a class="btn" href="https://claude.ai/artifact/P1ZgCvB1JeDTTurKB6fpc9" style="border: 2px solid {{accent}}; color: #14231A">Shiko planin</a>
+</div>
+</div>
+<div style="flex: 1 1 380px; display: flex; justify-content: center">
+<svg viewBox="0 0 520 440" role="img" aria-label="Hartë topografike me kurba niveli, itinerar dhe busull" style="width: 100%; max-width: 520px; height: auto">
+<rect width="520" height="440" rx="22" fill="#E3EFE5"></rect>
+<g stroke="#BFD3C2" stroke-width="1"><path d="M0 110H520M0 220H520M0 330H520M130 0V440M260 0V440M390 0V440"></path></g>
+<g fill="none" stroke="#2F6B3F" stroke-width="1.6">
+<ellipse cx="170" cy="240" rx="160" ry="115" transform="rotate(-18 170 240)"></ellipse>
+<ellipse cx="170" cy="240" rx="125" ry="88" transform="rotate(-18 170 240)"></ellipse>
+<ellipse cx="170" cy="240" rx="90" ry="62" transform="rotate(-18 170 240)"></ellipse>
+<ellipse cx="170" cy="240" rx="55" ry="36" transform="rotate(-18 170 240)"></ellipse>
+<ellipse cx="170" cy="240" rx="22" ry="14" transform="rotate(-18 170 240)"></ellipse>
+<ellipse cx="380" cy="130" rx="110" ry="70" transform="rotate(12 380 130)"></ellipse>
+<ellipse cx="380" cy="130" rx="76" ry="46" transform="rotate(12 380 130)"></ellipse>
+<ellipse cx="380" cy="130" rx="40" ry="22" transform="rotate(12 380 130)"></ellipse>
+</g>
+<path d="M50 380C130 330 200 350 260 270S390 210 450 80" fill="none" stroke="#B5651D" stroke-width="3.5" stroke-dasharray="9 7" stroke-linecap="round"></path>
+<g fill="#fff" stroke="#B5651D" stroke-width="3"><circle cx="50" cy="380" r="9"></circle><circle cx="260" cy="270" r="9"></circle><circle cx="450" cy="80" r="9"></circle></g>
+<g font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#14231A"><text x="64" y="400">A</text><text x="274" y="296">K1</text><text x="464" y="70">B</text></g>
+<g transform="translate(420 355)">
+<circle r="48" fill="#fff" stroke="#2F6B3F" stroke-width="3"></circle>
+<text y="-30" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#14231A">N</text>
+<g transform="rotate(40)"><polygon points="0,-30 8,0 -8,0" fill="#B5651D"></polygon><polygon points="0,30 8,0 -8,0" fill="#14231A" opacity=".55"></polygon></g>
+<circle r="3.5" fill="#14231A"></circle>
+</g>
+</svg>
+</div>
+</div>
+
+<div class="wrap" style="padding-top: 24px; padding-bottom: 72px">
+<h2 class="h" style="font-size: 36px; margin-bottom: 8px">Gjashtë module, një rrugë e qartë</h2>
+<p style="margin: 0 0 32px; color: #4A5A4F; font-size: 17px">Nga leximi i hartës deri te planifikimi i itinerarit.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+<div class="mod"><b>01</b><h3>Hartat dhe shkalla</h3><p>Shkalla, kurbat e nivelit, simbolet dhe leximi i reliefit.</p></div>
+<div class="mod"><b>02</b><h3>Sistemet e koordinatave</h3><p>Gjeografike, UTM dhe MGRS, standardi i NATO-s.</p></div>
+<div class="mod"><b>03</b><h3>Orientimi me busull</h3><p>Azimuti, azimuti i kundërt, mil dhe deklinimi magnetik.</p></div>
+<div class="mod"><b>04</b><h3>Navigimi GPS/GNSS</h3><p>Parimi, saktësia, kufizimet, jamming dhe spoofing.</p></div>
+<div class="mod"><b>05</b><h3>Orientimi pa instrumente</h3><p>Dielli, Ylli Polar dhe shenjat natyrore si verifikim.</p></div>
+<div class="mod"><b>06</b><h3>Terreni dhe itinerari</h3><p>Analiza OCOKA, pika kontrolli, distanca dhe kohë.</p></div>
+</div>
+</div>
+
+<div class="wrap" style="padding-top: 8px; padding-bottom: 72px">
+<h2 class="h" style="font-size: 36px; margin-bottom: 8px">Dy video shpjegues</h2>
+<p style="margin: 0 0 32px; color: #4A5A4F; font-size: 17px">Hyrje e shkurtër, në vija të përgjithshme, përpara se të nisësh ushtrimet. Çdo video zgjat rreth 18 sekonda dhe përsëritet vazhdimisht.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px">
+
+<div style="background: #fff; border: 1px solid #CFDCCF; border-radius: 16px; overflow: hidden">
+<div style="position: relative; aspect-ratio: 16 / 9; background: #E3EFE5">
+<svg viewBox="0 0 640 360" role="img" aria-label="Animacion: shkala, kurbat e nivelit dhe pjerrësia e shpatit" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%">
+<path d="M0 90H640M0 180H640M0 270H640M160 0V360M320 0V360M480 0V360" stroke="#BFD3C2" stroke-width="1" fill="none"></path>
+<g class="sc1">
+<line class="ln" pathLength="1" x1="120" y1="190" x2="520" y2="190" stroke="#B5651D" stroke-width="5" stroke-linecap="round"></line>
+<circle cx="120" cy="190" r="12" fill="#fff" stroke="#B5651D" stroke-width="4"></circle>
+<circle cx="520" cy="190" r="12" fill="#fff" stroke="#B5651D" stroke-width="4"></circle>
+<g font-family="Inter, sans-serif" font-weight="700" fill="#14231A" text-anchor="middle"><text x="320" y="160" font-size="30">4 cm në hartë</text><text x="320" y="250" font-size="30" fill="#2F6B3F">= 1 000 m në terren</text><text x="120" y="232" font-size="20">A</text><text x="520" y="232" font-size="20">B</text></g>
+</g>
+<g class="sc2">
+<g fill="none" stroke="#2F6B3F" stroke-width="3">
+<ellipse class="cn" pathLength="1" cx="320" cy="190" rx="230" ry="130"></ellipse>
+<ellipse class="cn" pathLength="1" cx="320" cy="190" rx="170" ry="96"></ellipse>
+<ellipse class="cn" pathLength="1" cx="320" cy="190" rx="110" ry="62"></ellipse>
+<ellipse class="cn" pathLength="1" cx="320" cy="190" rx="50" ry="28"></ellipse>
+</g>
+<g font-family="Inter, sans-serif" font-weight="700" font-size="15" fill="#14231A" text-anchor="middle"><text x="320" y="54">100 m</text><text x="320" y="88">200 m</text><text x="320" y="122">300 m</text><text x="320" y="156">400 m</text></g>
+</g>
+<g class="sc3">
+<g fill="none" stroke="#2F6B3F" stroke-width="3" stroke-linecap="round">
+<path d="M40 110q60-16 120 0t120 0"></path><path d="M40 124q60-16 120 0t120 0"></path><path d="M40 138q60-16 120 0t120 0"></path><path d="M40 152q60-16 120 0t120 0"></path><path d="M40 166q60-16 120 0t120 0"></path>
+<path d="M360 90q60-16 120 0t120 0"></path><path d="M360 130q60-16 120 0t120 0"></path><path d="M360 170q60-16 120 0t120 0"></path><path d="M360 210q60-16 120 0t120 0"></path><path d="M360 250q60-16 120 0t120 0"></path>
+</g>
+<g font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#14231A" text-anchor="middle"><text x="160" y="230">Shpat i pjerrët</text><text x="480" y="310">Shpat i butë</text></g>
+</g>
+</svg>
+</div>
+<div style="position: relative; height: 96px; background: #14231A; color: #fff; font-size: 16px; line-height: 1.4">
+<span class="cap sc1">1. Shkala: 4 cm në hartën 1:25 000 janë 1 000 m në terren.</span>
+<span class="cap sc2">2. Kurbat e nivelit bashkojnë pika me të njëjtën lartësi.</span>
+<span class="cap sc3">3. Kurba të dendura tregojnë shpat të pjerrët; të rralla, shpat të butë.</span>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: #2D4A37"><div class="pb" style="height: 4px; background: #8FD3A2"></div></div>
+</div>
+<div style="padding: 20px 24px">
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: {{accent}}">Video 1 · 18 sekonda</div>
+<h3 class="h" style="font-size: 22px; margin: 6px 0">Si lexohet një hartë</h3>
+<p style="margin: 0; color: #4A5A4F; line-height: 1.5">Shkala, kurbat e nivelit dhe pjerrësia e shpatit, në tri hapa.</p>
+</div>
+</div>
+
+<div style="background: #fff; border: 1px solid #CFDCCF; border-radius: 16px; overflow: hidden">
+<div style="position: relative; aspect-ratio: 16 / 9; background: #E3EFE5">
+<svg viewBox="0 0 640 360" role="img" aria-label="Animacion: busulla, azimuti dhe azimuti i kundërt" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%">
+<g transform="translate(220 180)">
+<circle r="125" fill="#fff" stroke="#2F6B3F" stroke-width="5"></circle>
+<g font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="#14231A" text-anchor="middle"><text y="-100">N</text><text x="100" y="7">E</text><text y="112">S</text><text x="-100" y="7">W</text></g>
+<g class="nd"><polygon points="0,-88 13,0 -13,0" fill="#B5651D"></polygon><polygon class="bk" points="0,88 13,0 -13,0" fill="#14231A"></polygon></g>
+<circle r="6" fill="#14231A"></circle>
+</g>
+<g font-family="Inter, sans-serif" font-weight="700" fill="#14231A">
+<g class="sc1"><text x="390" y="175" font-size="64" fill="#B5651D">70°</text><text x="390" y="212" font-size="22">azimuti</text></g>
+<g class="sc2"><text x="390" y="150" font-size="28">70° + 180°</text><text x="390" y="200" font-size="42" fill="#2F6B3F">= 250°</text></g>
+<g class="sc3"><text x="390" y="150" font-size="22">360° = 6400 mil</text><text x="390" y="190" font-size="20">larg metalit</text></g>
+</g>
+</svg>
+</div>
+<div style="position: relative; height: 96px; background: #14231A; color: #fff; font-size: 16px; line-height: 1.4">
+<span class="cap sc1">1. Azimuti është këndi nga Veriu, në drejtim të akrepave të orës.</span>
+<span class="cap sc2">2. Azimuti i kundërt = azimut ± 180°.</span>
+<span class="cap sc3">3. 360° = 6400 mil. Mbaje busullën larg metalit.</span>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: #2D4A37"><div class="pb" style="height: 4px; background: #8FD3A2"></div></div>
+</div>
+<div style="padding: 20px 24px">
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: {{accent}}">Video 2 · 18 sekonda</div>
+<h3 class="h" style="font-size: 22px; margin: 6px 0">Si përdoret busulla</h3>
+<p style="margin: 0; color: #4A5A4F; line-height: 1.5">Azimuti, azimuti i kundërt dhe milet, në tri hapa.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div style="background: #14231A; color: #E6EFE7; padding: 72px 0">
+<div class="wrap">
+<h2 class="h" style="font-size: 36px; margin-bottom: 8px">Rezultati menjëherë pas veprimit</h2>
+<p style="margin: 0 0 32px; color: #B7C9BB; font-size: 17px">Ushtrime të rastësishme me përgjigje të çastit dhe zgjidhje hap pas hapi.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+<div style="background: #1E3326; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="color: #B7C9BB; font-size: 14px">Ushtrim: distanca</div>
+<div style="font-size: 18px; line-height: 1.5">Në hartë 1:50 000 dy pika janë 4 cm larg. Sa metra është distanca në terren?</div>
+<div style="background: #2E7D32; color: #fff; border-radius: 10px; padding: 12px 14px; font-weight: 600">✔ Saktë! 4 cm × 50 000 = 200 000 cm = 2 000 m</div>
+</div>
+<div style="background: #1E3326; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="color: #B7C9BB; font-size: 14px">Ushtrim: azimuti i kundërt</div>
+<div style="font-size: 18px; line-height: 1.5">Azimuti është 70°. Sa është azimuti i kundërt?</div>
+<div style="background: #2E7D32; color: #fff; border-radius: 10px; padding: 12px 14px; font-weight: 600">✔ Saktë! 70° + 180° = 250°</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrap" style="padding-top: 72px; padding-bottom: 24px">
+<h2 class="h" style="font-size: 36px; margin-bottom: 8px">Ushtrimet sipas leksionit</h2>
+<p style="margin: 0 0 32px; color: #4A5A4F; font-size: 17px">Çdo leksion ka 10 ushtrime me rezultat të menjëhershëm: 16 me llogaritje ose veprim dhe 44 pyetje me opsione.</p>
+<div style="overflow-x: auto; background: #fff; border: 1px solid #CFDCCF; border-radius: 16px">
+<table style="width: 100%; min-width: 760px; border-collapse: collapse; font-size: 15px; line-height: 1.45">
+<thead>
+<tr style="background: #E3EFE5; text-align: left">
+<th style="padding: 14px 16px">Leksioni</th>
+<th style="padding: 14px 16px; text-align: center">Llogaritje ose veprim</th>
+<th style="padding: 14px 16px; text-align: center">Pyetje me opsione</th>
+<th style="padding: 14px 16px; text-align: center">Gjithsej</th>
+<th style="padding: 14px 16px">Përmbajtja</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-top: 1px solid #CFDCCF"><td style="padding: 14px 16px; font-weight: 600">1. Hartat dhe shkalla</td><td style="padding: 14px 16px; text-align: center">4</td><td style="padding: 14px 16px; text-align: center">6</td><td style="padding: 14px 16px; text-align: center; font-weight: 600">10</td><td style="padding: 14px 16px; color: #3A4A3F">Cm në metra dhe anasjelltas; shkalla, kurbat e nivelit, legjenda</td></tr>
+<tr style="border-top: 1px solid #CFDCCF"><td style="padding: 14px 16px; font-weight: 600">2. Koordinatat</td><td style="padding: 14px 16px; text-align: center">2</td><td style="padding: 14px 16px; text-align: center">8</td><td style="padding: 14px 16px; text-align: center; font-weight: 600">10</td><td style="padding: 14px 16px; color: #3A4A3F">Distanca dhe azimuti mes dy pikave; UTM, MGRS, gjerësi dhe gjatësi</td></tr>
+<tr style="border-top: 1px solid #CFDCCF"><td style="padding: 14px 16px; font-weight: 600">3. Busulla</td><td style="padding: 14px 16px; text-align: center">6</td><td style="padding: 14px 16px; text-align: center">4</td><td style="padding: 14px 16px; text-align: center; font-weight: 600">10</td><td style="padding: 14px 16px; color: #3A4A3F">Azimut i kundërt, gradë ↔ mil, vendosja e busullës; deklinimi</td></tr>
+<tr style="border-top: 1px solid #CFDCCF"><td style="padding: 14px 16px; font-weight: 600">4. GNSS</td><td style="padding: 14px 16px; text-align: center">0</td><td style="padding: 14px 16px; text-align: center">10</td><td style="padding: 14px 16px; text-align: center; font-weight: 600">10</td><td style="padding: 14px 16px; color: #3A4A3F">Satelitët, Galileo, jamming, spoofing, waypoint, saktësia</td></tr>
+<tr style="border-top: 1px solid #CFDCCF"><td style="padding: 14px 16px; font-weight: 600">5. Pa instrumente</td><td style="padding: 14px 16px; text-align: center">0</td><td style="padding: 14px 16px; text-align: center">10</td><td style="padding: 14px 16px; text-align: center; font-weight: 600">10</td><td style="padding: 14px 16px; color: #3A4A3F">Dielli, Ylli Polar, ora analoge, Hëna, metoda e hijes</td></tr>
+<tr style="border-top: 1px solid #CFDCCF"><td style="padding: 14px 16px; font-weight: 600">6. Terreni dhe itinerari</td><td style="padding: 14px 16px; text-align: center">4</td><td style="padding: 14px 16px; text-align: center">6</td><td style="padding: 14px 16px; text-align: center; font-weight: 600">10</td><td style="padding: 14px 16px; color: #3A4A3F">Koha e marshimit, pjerrësia në %; OCOKA, pikat e kontrollit</td></tr>
+<tr style="border-top: 2px solid {{accent}}; background: #F3F6F1; font-weight: 700"><td style="padding: 14px 16px">Gjithsej</td><td style="padding: 14px 16px; text-align: center">16</td><td style="padding: 14px 16px; text-align: center">44</td><td style="padding: 14px 16px; text-align: center">60</td><td style="padding: 14px 16px"></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="wrap" style="padding-top: 48px; padding-bottom: 72px">
+<h2 class="h" style="font-size: 36px; margin-bottom: 32px">Si funksionon</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px">
+<div><div class="h" style="font-size: 18px; color: {{accent}}; font-weight: 700">1 · Mëso</div><p style="margin: 8px 0 0; line-height: 1.5; color: #3A4A3F">Leksione të shkurtra me diagrame dhe shembuj nga terreni.</p></div>
+<div><div class="h" style="font-size: 18px; color: {{accent}}; font-weight: 700">2 · Praktiko</div><p style="margin: 8px 0 0; line-height: 1.5; color: #3A4A3F">Simulator busulle, kalkulatorë dhe ushtrime të rastësishme.</p></div>
+<div><div class="h" style="font-size: 18px; color: {{accent}}; font-weight: 700">3 · Vlerësohu</div><p style="margin: 8px 0 0; line-height: 1.5; color: #3A4A3F">Kuize me notë automatike dhe pasqyrë e progresit.</p></div>
+</div>
+</div>
+
+<div style="background: {{accent}}; color: #fff; padding: 56px 0; text-align: center">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 20px; align-items: center">
+<h2 class="h" style="font-size: 34px">Provo prototipin tani</h2>
+<a class="btn" href="https://claude.ai/artifact/6wjoe8uRSdsVRRjfKFhEBv" style="background: #fff; color: #14231A">Hap platformën</a>
+</div>
+</div>
+<div class="wrap" style="padding-top: 24px; padding-bottom: 32px; color: #4A5A4F; font-size: 14px">Prototip për Akademinë e Forcave të Armatosura. Përmbajtja dhe hartat duhet të miratohen nga institucioni para përdorimit.</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2F6B3F"},"$preview":{"width":1280,"height":3250}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#2F6B3F' };
+}
+}
+</script>
+</body>
+</html>
